@@ -9,4 +9,8 @@ modifications apportées par les deux branches. L'option "-m 'Mon texte'" permet
 git cherry-pick: Cette commande permet d'appliquer les modifications d'un commit particulier d'une autre branche à la branche actuelle. Par exemple, si un correctif a été développé sur une autre branche, et qu'il devient nécessaire
 de le déployer sur la branche principale, il est possible, grâce à "cherry-pick", de ne récupérer que les modifications apportées par le commit qui nous intéresse.
 
-#####Fin des descriptions#####
+git fetch: Télécharge les différences (commits) du dépôt distant.
+
+git pull: Procède à un git fetch puis un git merge. Pratique pour économiser ces 2 commandes. En revanche, il peut effectuer des commits pour fusionner, sans prévenir.
+
+git push: Upload les différences (commits) de la branche locale vers la branche distant.
