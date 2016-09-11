@@ -5,3 +5,5 @@ l'exécution de la commande, l'utilisateur utilise l'option "-m 'Mon texte'" afi
 
 git merge: Cette comamnde permet de fusionner deux branches. Cette commande va fusionner les commits des deux branches depuis leur séparation, le résultat de cette commande est qu'il ne restera plus qu'une branche, intégrant les
 modifications apportées par les deux branches. L'option "-m 'Mon texte'" permet de préciser le message du commit qui sera effectué lors de la fusion des deux branches.
+
+git cherry-pick: 
