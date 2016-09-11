@@ -1,1 +1,4 @@
 #####Liste et descriptions des fonctions git choisies par le groupe#####
+
+git commit: La commande "git commit" est une des commandes principales de l'outil git, elle permet de stocker le contenu de l'index et de "valider" les changements apportés aux fichiers présents dans le dépot. Habituellement, lors de
+l'exécution de la commande, l'utilisateur utilise l'option "-m 'Mon texte'" afin de décrire les modifications apportés par cette nouvelle version des fichiers. 
