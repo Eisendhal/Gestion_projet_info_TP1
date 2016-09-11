@@ -14,3 +14,4 @@ git fetch : Mise à jour des références locales des branches distantes ainsi q
 git pull : Exécution d'un "git fetch" puis d'un "git merge". Bien qu'elle soit pratique, quand la branche locale n'est pas derrière la branche distante, des fusions (avec commits parfois) sont effectués sans pouvoir annuler. Ce qui pose un soucis, pour la lisibilité de l'historique d'un dépôt.
 
 git push : Mise à jour des références du dépôt distant ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt distant, d'appliquer les modifications locales. Il pourrait s'agir d'un git pull côté distant, sauf que c'est un autre dépôt qui est à l'initiative.
+[git_push.png]
