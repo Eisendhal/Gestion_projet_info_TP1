@@ -1,5 +1,7 @@
 #####Liste et descriptions des fonctions git choisies par le groupe#####
 
+Les commandes merge, fetch, pull, push prennent facultativement en argument le dépôt distant (ex: origin) et la branche distante (ex: master).
+
 git commit: La commande "git commit" est une des commandes principales de l'outil git, elle permet de stocker le contenu de l'index et de "valider" les changements apportés aux fichiers présents dans le dépot. Habituellement, lors de
 l'exécution de la commande, l'utilisateur utilise l'option "-m 'Mon texte'" afin de décrire les modifications apportés par cette nouvelle version des fichiers. 
 
@@ -12,8 +14,10 @@ de le déployer sur la branche principale, il est possible, grâce à "cherry-pi
 git fetch : Mise à jour des références locales des branches distantes ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt local, de prendre simplement conscience des modifications distantes. Elles ne sont pas appliquées aux branches locales. Cette commande est sûre.
 [git_fetch.png]
 
-git pull : Exécution d'un "git fetch" puis d'un "git merge". Bien qu'elle soit pratique, quand la branche locale n'est pas derrière la branche distante, des fusions (avec commits parfois) sont effectués sans pouvoir annuler. Ce qui pose un soucis, pour la lisibilité de l'historique d'un dépôt.
+git pull : Exécution d'un "git fetch" puis d'un "git merge". Bien qu'elle soit pratique, quand la branche locale n'est pas derrière la branche distante, des fusions (avec commits parfois) sont effectués sans pouvoir annuler. Ce qui pose un soucis, pour la lisibilité de l'historique d'un dépôt. Il est d'usage d'utiliser plutôt "git pull --rebase" afin de remplacer l'opération de merging en une opération de rebasing. Il existe plusieurs façons par "git config" de spécifier ce comportement par défaut.
 [git_pull.png]
 
-git push : Mise à jour des références du dépôt distant ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt distant, d'appliquer les modifications locales. Il pourrait s'agir d'un git pull côté distant, sauf que c'est un autre dépôt qui est à l'initiative.
+git push : Mise à jour des références du dépôt distant ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt distant, d'appliquer les modifications locales. Il pourrait s'agir d'un git pull côté distant, sauf que c'est un autre dépôt qui est à l'initiative. Même si c'est rarement une bonne idée, on peut forcer le push si les branches locales et distantes ne sont pas cohérentes avec l'option "-f"
 [git_push.png]
+
+#####Fin des descriptions#####
