@@ -1,0 +1,1 @@
+Pour visualiser la dernière version du document LaTeX, vous pouver utiliser cette url : http://latex.aslushnikov.com/compile?git=https://github.com/Eisendhal/Gestion_projet_info_TP1&target=Document.tex
