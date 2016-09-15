@@ -92,15 +92,13 @@ Blablabla
 \section{Apprentissage de Github}
 Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prennent facultativement en argument le dépôt distant (ex: origin) et la branche distante (ex: master).
 
-\paragraph{git commit}La commande \texttt{git commit} est une des commandes principales de l'outil git, elle permet de stocker le contenu de l'index et de "valider" les changements apportés aux fichiers présents dans le dépot. Habituellement, lors de
-l'exécution de la commande, l'utilisateur utilise l'option \texttt{-m 'Mon texte'} afin de décrire les modifications apportés par cette nouvelle version des fichiers.
+\paragraph{git commit}Cette commande est une des commandes principales de l'outil git, elle permet de stocker le contenu de l'index et de "valider" les changements apportés aux fichiers présents dans le dépot. Habituellement, lors de l'exécution de la commande, l'utilisateur utilise l'option \texttt{-m 'Mon texte'} afin de décrire les modifications apportés par cette nouvelle version des fichiers.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{images/git_commit.jpg}
 \end{figure}
 
-\paragraph{git merge}Cette comamnde permet de fusionner deux branches. Cette commande va fusionner les commits des deux branches depuis leur séparation, le résultat de cette commande est qu'il ne restera plus qu'une branche, intégrant les
-modifications apportées par les deux branches. L'option \texttt{-m 'Mon texte'} permet de préciser le message du commit qui sera effectué lors de la fusion des deux branches.
+\paragraph{git merge}Cette commande permet de fusionner deux branches. Cette commande va fusionner les commits des deux branches depuis leur séparation, le résultat de cette commande est qu'il ne restera plus qu'une branche, intégrant les modifications apportées par les deux branches. L'option \texttt{-m 'Mon texte'} permet de préciser le message du commit qui sera effectué lors de la fusion des deux branches.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{images/git_merge.jpg}
@@ -113,13 +111,13 @@ de le déployer sur la branche principale, il est possible, grâce à \texttt{ch
 	\includegraphics[width=\textwidth]{images/git_cherry-pick.jpg}
 \end{figure}
 
-\paragraph{git status}La commande git-status permet d'afficher les chemins qui ont des differences entre le fichier index et le HEAD commit actuelle mais aussi les chemins qui ont des différences entre l'arbre actuelle et le fichier d'index et enfin les chemins l'abre actuel qui ne sont pas retenu par GIT. Les premiers chemins correspondent à ce que vous utiliseriez en faisent un git-commit tous les autre correspondent quand à eux à un git-add suivi d'un git-commit. L'option \texttt{-s} ou \texttt{--short} permet de formater l'affichage de la commande dans le format \texttt{short}.
+\paragraph{git status}La commande permet d'afficher les chemins qui ont des differences entre le fichier index et le HEAD commit actuelle mais aussi les chemins qui ont des différences entre l'arbre actuelle et le fichier d'index et enfin les chemins l'abre actuel qui ne sont pas retenu par GIT. Les premiers chemins correspondent à ce que vous utiliseriez en faisent un git-commit tous les autre correspondent quand à eux à un git-add suivi d'un git-commit. L'option \texttt{-s} ou \texttt{--short} permet de formater l'affichage de la commande dans le format \texttt{short}.
 
 \paragraph{git log}Permet d'afficher les logs (le journal) des commits. La commande utilise les options applicable à la commande \texttt{git rev-list} afin de controler ce qui est afficher et comment, ainsi que les options applicable à la commande \texttt{git diff -*} afin de controler l'affichage des changement induit par  chaque commit.
 
 \paragraph{git tag}La commande permet de créer, lister, supprimer ou de verifier un objet "tag" encoder avec la clé GPG. Par exemple si l'on veut supprimer on utilisera  l'option \texttt{-d}, si l'on veut lister on utilisera l'option \texttt{-l} et si l'on veut verifier on utilisera l'option \texttt{-v}.
 
-\paragraph{git branch}La commande \texttt{git branch} permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionné avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule. \vspace{0.2cm}
+\paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionné avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule. \vspace{0.2cm}
 \texttt{
 \\	git branch               \# Permet de lister les branches
 \\	git branch <branche>     \# Permet de créer une nouvelle branche <branche>
