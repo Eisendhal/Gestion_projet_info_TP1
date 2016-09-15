@@ -36,8 +36,7 @@ git branch <branche>
 git checkout <branche>
 
 
-git diff: Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichiers (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemples. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Dans notre cas, il n’y en avait qu’un, mais s’il y en avait eu plusieurs nous les aurions tous vus.
-Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci :
+git diff: Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichiers (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemples. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci :
 git diff chemin vers le fichier
 
 #####Fin des descriptions#####
