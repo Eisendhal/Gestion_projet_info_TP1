@@ -39,4 +39,13 @@ git checkout <branche>
 git diff: Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichiers (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemples. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci :
 git diff chemin vers le fichier
 
+git add : ajoute les modifications d’un fichier de la branche active dans le dépôt de git. Elle est utilisée avant le commit.
+git add –p : (patch mode) : Elle est utilisée pour les fichiers modifiés. Cette option permet d’indexer les modifications que l’on souhaite retenir ou les indexer séparément. Il y a plusieurs modes : indexer, ne pas indexer, indexer le reste des modifications, etc.
+
+git rm filesource  newfile : permet d’effacer un fichier de la branche courante et de l’ index.
+git rm --cached supprime le fichier du dépôt git mais pas du répertoire personnel.
+
+git mv : renomme un fichier et/ou le change de répertoire.
+git mv -f : force le renommage du fichier ou son déplacement. Il peut être dangereux car les fichiers du même nom sont effacés. 
+
 #####Fin des descriptions#####
