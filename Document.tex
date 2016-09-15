@@ -100,6 +100,8 @@ modifications apportées par les deux branches. L'option \texttt{-m 'Mon texte'}
 \paragraph{git cherry-pick}Cette commande permet d'appliquer les modifications d'un commit particulier d'une autre branche à la branche actuelle. Par exemple, si un correctif a été développé sur une autre branche, et qu'il devient nécessaire
 de le déployer sur la branche principale, il est possible, grâce à \texttt{cherry-pick}, de ne récupérer que les modifications apportées par le commit qui nous intéresse.
 
+\paragraph{git status}la commande git-status permet d'afficher les chemins qui ont des differences entre le fichier index et le HEAD commit actuelle mais aussi les chemins qui ont des différences entre l'arbre actuelle et le fichier d'index et enfin les chemins l'abre actuel qui ne sont pas retenu par GIT. Les premiers chemins correspondent à ce que vous utiliseriez en faisent un git-commit tous les autre correspondent quand à eux à un git-add suivi d'un git-commit. L'option \texttt{-s} ou \texttt{--short} permet de formater l'affichage de la commande dans le format \texttt{short}.
+
 \paragraph{git fetch}Mise à jour des références locales des branches distantes ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt local, de prendre simplement conscience des modifications distantes. Elles ne sont pas appliquées aux branches locales. Cette commande est sûre.
 \begin{figure}[h]
 	\centering
@@ -117,8 +119,6 @@ de le déployer sur la branche principale, il est possible, grâce à \texttt{ch
 	\centering
 	\includegraphics{images/git_push.png}
 \end{figure}
-
-%\paragraph{git status}la commande git-status permet d'afficher les chemins qui ont des differences entre le fichier index et le HEAD commit actuelle mais aussi les chemins qui ont des différences entre l'arbre actuelle et le fichier d'index et enfin les chemins l'abre actuel qui ne sont pas retenu par GIT. Les premiers chemins correspondent à ce que vous utiliseriez en faisent un git-commit tous les autre correspondent quand à eux à un git-add suivi d'un git-commit. L'option \texttt{-s] ou \texttt{--short} permet de formater l'affichage de la commande dans le format \texttt{short}.
 
 \newpage
 \section{Utilisation de Github}
