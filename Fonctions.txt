@@ -1,4 +1,4 @@
-#####Liste et descriptions des fonctions git choisies par le groupe#####
+﻿#####Liste et descriptions des fonctions git choisies par le groupe#####
 
 Les commandes merge, fetch, pull, push prennent facultativement en argument le dépôt distant (ex: origin) et la branche distante (ex: master).
 
@@ -19,5 +19,25 @@ git pull : Exécution d'un "git fetch" puis d'un "git merge". Bien qu'elle soit 
 
 git push : Mise à jour des références du dépôt distant ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt distant, d'appliquer les modifications locales. Il pourrait s'agir d'un git pull côté distant, sauf que c'est un autre dépôt qui est à l'initiative. Même si c'est rarement une bonne idée, on peut forcer le push si les branches locales et distantes ne sont pas cohérentes avec l'option "-f"
 [git_push.png]
+
+git branch : La commande git branch permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionné avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule.
+git branch   # Permet de lister les branches
+git branch <branche>   # Permet de créer une nouvelle branche <branche>
+git branch -m <branche>  # Renomme la branche courante en <branche>
+git branch -d <branche>  # Permet de supprimer une branche
+git branch -D <branche>  # Supprime la branche même si elle n'a pas été fusionnée
+
+git checkout : Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande checkout .
+git checkout <branche>
+Elle permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable.
+git checkout -b <branche> 
+# équivalent à 
+git branch <branche>
+git checkout <branche>
+
+
+git diff: Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichiers (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemples. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Dans notre cas, il n’y en avait qu’un, mais s’il y en avait eu plusieurs nous les aurions tous vus.
+Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci :
+git diff chemin vers le fichier
 
 #####Fin des descriptions#####
