@@ -27,6 +27,7 @@
 \begin{document}
 
 \newcommand{\sectionbreak}{\clearpage} % Applique le saut de page à chaque section
+\newcommand{\code}[1]{\vspace{0.2cm} \texttt{#1}} % Créer une commande pour insérer du code
 
 % Membres du groupe
 \newcommand{\antoine}{Antoine \textsc{Moreau}}
@@ -127,8 +128,8 @@ de le déployer sur la branche principale, il est possible, grâce à \texttt{ch
 
 \paragraph{git tag}La commande permet de créer, lister, supprimer ou de verifier un objet "tag" encoder avec la clé GPG. Par exemple si l'on veut supprimer on utilisera  l'option \texttt{-d}, si l'on veut lister on utilisera l'option \texttt{-l} et si l'on veut verifier on utilisera l'option \texttt{-v}.
 
-\paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionné avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule. \vspace{0.2cm}
-\texttt{
+\paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionné avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule.
+\code{
 \\	git branch               \# Permet de lister les branches
 \\	git branch <branche>     \# Permet de créer une nouvelle branche <branche>
 \\	git branch -m <branche>  \# Renomme la branche courante en <branche>
@@ -136,8 +137,8 @@ de le déployer sur la branche principale, il est possible, grâce à \texttt{ch
 \\	git branch -D <branche>  \# Supprime la branche même si elle n'a pas été fusionnée
 }
 
-\paragraph{git checkout}Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande ``checkout''. \texttt{git checkout <branche>} permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable. \vspace{0.2cm}
-\texttt{
+\paragraph{git checkout}Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande ``checkout''. \texttt{git checkout <branche>} permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable.
+\code{
 \\	git checkout -b <branche> \# est équivalent à :
 \\	git branch <branche>
 \\	git checkout <branche>
