@@ -173,6 +173,12 @@ de le déployer sur la branche principale, il est possible, grâce à \texttt{ch
 
 \paragraph{git reset}La commande reset permet de corriger des erreurs dans l'arbre de travail dans lequel on se situe. Pour ce faire reset va réinitialiser l'arbre de travail dans l'état auquel il était au dernier commit. Il faut noté que la commande reset va corriger uniquement des erreurs qui n'ont pas été commit. En utilisant la commande \texttt{git reset --hard HEAD} à la fois toutes les modifications faites sur l'arbre ainsi que les modifications de l'index git seront supprimées.
 
+\paragraph{git init}Cette commande permet de créer un répertoire git vide contenant les sous répertoires refs/heads et refs/tags. Cette fonction ne peut pas être lancée dans un répertoire existant. On peut notamment l’utiliser de la façon suivante : \texttt{git init –q}, où –q permet de supprimer l’affichage de tous les messages concernant la réalisation de la commande, à l’exception des messages d’erreur.
+
+\paragraph{git clone}Cette commande permet créer un nouveau répertoire identique à celui placé en argument. On peut utiliser cette commande avec l’option -l : on obtient \texttt{git-clone -l "le_nom_du_répertoire"}, où -l permet de de créer ce clone directement dans la mémoire interne de la machine.
+
+\paragraph{git rebase}Cette commande permet d'ajouter toutes les modifications faites sur une branche, à une autre branche. On peut utiliser cette commande avec l'option –onto : on obtient \texttt{git rebase –onto "nom_du_fichier"}, où –onto permet de choisir à partir de quel fichier d'une branche les modification d'une autre branche sont ajoutées.
+
 
 \section{Utilisation de Github}
 Blablabla
