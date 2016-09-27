@@ -137,18 +137,21 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 			git branch -d <branche>  \# Permet de supprimer une branche \\
 			git branch -D <branche>  \# Supprime la branche même si elle n'a pas été fusionnée
 	}
-	\centering
-	\includegraphics{images/git_branch.png}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{images/git_branch.png}
+	\end{figure}
 \end{figure}
 
 \paragraph{git checkout}Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande \texttt{checkout}. \texttt{git checkout <branche>} permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable.
 \begin{figure}[H]
 	\texttt{git checkout -b <branche> \# est équivalent à : \\
 		    git branch <branche> \\
-			git checkout <branche>
-	}
-	\centering
-	\includegraphics{images/git_checkout.png}
+			git checkout <branche>}
+	\begin{figure}[H]
+		\centering
+		\includegraphics{images/git_checkout.png}
+	\end{figure}
 \end{figure}
 
 \paragraph{git diff}Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichier (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemple. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci : \texttt{git diff chemin/vers/le/fichier.txt}.
