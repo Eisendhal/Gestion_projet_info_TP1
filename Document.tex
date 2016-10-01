@@ -196,11 +196,23 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 
 \paragraph{git rebase}Cette commande permet d'ajouter toutes les modifications faites sur une branche, à une autre branche. On peut utiliser cette commande avec l'option \texttt{–onto} : on obtient \texttt{git rebase –onto "nom du fichier"}, où \texttt{–onto} permet de choisir à partir de quel fichier d'une branche les modification d'une autre branche sont ajoutées.
 
-\paragraph{git add} ajoute les modifications d’un fichier de la branche active dans le dépôt de git. Elle est utilisée avant le commit. \texttt{–p} : on obtient \texttt{git add –p "nom du fichier"}, où \texttt{–p} (patch mode) Elle est utilisée pour les fichiers modifiés. Cette option permet d’indexer les modifications que l’on souhaite retenir ou les indexer séparément. Il y a plusieurs modes : indexer, ne pas indexer, indexer le reste des modifications, etc.
+\paragraph{git add}Ajoute les modifications d’un fichier de la branche active dans le dépôt de git. Elle est utilisée avant le commit. \texttt{–p} : on obtient \texttt{git add –p "nom du fichier"}, où \texttt{–p} (patch mode) Elle est utilisée pour les fichiers modifiés. Cette option permet d’indexer les modifications que l’on souhaite retenir ou les indexer séparément. Il y a plusieurs modes : indexer, ne pas indexer, indexer le reste des modifications, etc.
+\begin{figure}[H]
+	\centering
+	\includegraphics{images/git_add_-p}
+\end{figure}
 
 \paragraph{git rm} rm filesource  newfile : permet d’effacer un fichier de la branche courante et de l’ index. \texttt{–-cached} : on obtient \texttt{git rm --cached "nom du fichier"}, où \texttt{–-cached} supprime le fichier du dépôt git mais pas du répertoire personnel.
+\begin{figure}[H]
+	\centering
+	\includegraphics{images/git_rm_--cached.png}
+\end{figure}
 
-\paragraph{git mv} renomme un fichier et/ou le change de répertoire. \texttt{–f} : on obtient \texttt{git rm -f "nom du fichier"}, où \texttt{–f} force le renommage du fichier ou son déplacement. Il peut être dangereux car les fichiers du même nom sont effacés. 
+\paragraph{git mv} renomme un fichier et/ou le change de répertoire. \texttt{–f} : on obtient \texttt{git rm -f "nom du fichier"}, où \texttt{–f} force le renommage du fichier ou son déplacement. Il peut être dangereux car les fichiers du même nom sont effacés.
+\begin{figure}[H]
+	\centering
+	\includegraphics{images/git_mv_-f}
+\end{figure}
 
 \section{Utilisation de Github}
 Blablabla
