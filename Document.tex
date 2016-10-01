@@ -154,7 +154,7 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 	\end{figure}
 \end{figure}
 
-\paragraph{git diff}Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichier (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemple. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci : \texttt{git diff chemin/vers/le/fichier.txt}.
+\paragraph{git diff}Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichier (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemple. L'option \texttt{--cached} souvent utilisée, permet de comparer après un \texttt{git add} par exemple, les différences avec le dernier commit. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci : \texttt{git diff chemin/vers/le/fichier.txt}.
 \begin{figure}[H]
 	\centering
 	\includegraphics{images/git_diff.png}
