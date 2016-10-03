@@ -191,8 +191,17 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 \end{figure}
 
 \paragraph{git init}Cette commande permet de créer un répertoire git vide contenant les sous répertoires \texttt{refs/heads} et \texttt{refs/tags}. Cette fonction ne peut pas être lancée dans un répertoire existant. On peut notamment l’utiliser de la façon suivante : \texttt{git init -q}, où \texttt{-q} permet de supprimer l’affichage de tous les messages concernant la réalisation de la commande, à l’exception des messages d’erreur.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/git-init.xcf}
+\end{figure}
+
 
 \paragraph{git clone}Cette commande permet créer un nouveau répertoire identique à celui placé en argument. On peut utiliser cette commande avec l’option \texttt{-l} : on obtient \texttt{git clone -l "le nom du répertoire"}, où \texttt{-l} permet de de créer ce clone directement dans la mémoire interne de la machine.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/git-clone.xcf}
+\end{figure}
 
 \paragraph{git rebase}Cette commande permet d'ajouter toutes les modifications faites sur une branche, à une autre branche. On peut utiliser cette commande avec l'option \texttt{-onto} : on obtient \texttt{git rebase -onto "nom du fichier"}, où \texttt{-onto} permet de choisir à partir de quel fichier d'une branche les modification d'une autre branche sont ajoutées.
 
