@@ -204,6 +204,10 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 \end{figure}
 
 \paragraph{git rebase}Cette commande permet d'ajouter toutes les modifications faites sur une branche, à une autre branche. On peut utiliser cette commande avec l'option \texttt{-onto} : on obtient \texttt{git rebase -onto "nom du fichier"}, où \texttt{-onto} permet de choisir à partir de quel fichier d'une branche les modification d'une autre branche sont ajoutées.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{images/git-rebase.png}
+\end{figure}
 
 \paragraph{git add}Ajoute les modifications d’un fichier de la branche active dans le dépôt de git. Elle est utilisée avant le commit. \texttt{-p} : on obtient \texttt{git add -p "nom du fichier"}, où \texttt{-p} (patch mode) Elle est utilisée pour les fichiers modifiés. Cette option permet d’indexer les modifications que l’on souhaite retenir ou les indexer séparément. Il y a plusieurs modes : indexer, ne pas indexer, indexer le reste des modifications, etc.
 \begin{figure}[H]
