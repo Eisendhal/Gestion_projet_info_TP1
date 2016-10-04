@@ -145,6 +145,12 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 \end{figure}
 
 \paragraph{git tag}La commande permet de créer, lister, supprimer ou de vérifier un objet "tag" encodé avec la clé GPG. Par exemple si l'on veut supprimer on utilisera  l'option \texttt{-d}, si l'on veut lister on utilisera l'option \texttt{-l} et si l'on veut verifier on utilisera l'option \texttt{-v}.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{images/git_tag.png}
+	\caption{\texttt{git tag}}
+	\label{fig:git_tag}
+\end{figure}
 
 \paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionnée avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule. \\
 \texttt{git branch               \# Permet de lister les branches \\
