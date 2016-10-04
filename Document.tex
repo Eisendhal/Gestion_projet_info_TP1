@@ -107,21 +107,27 @@ Dany \textsc{Fortin-Simard}
 Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prennent facultativement en argument le dépôt distant (ex: origin) et la branche distante (ex: master).
 
 \paragraph{git commit}Cette commande est une des commandes principales de l'outil git, elle permet de stocker le contenu de l'index et de "valider" les changements apportés aux fichiers présents dans le dépot. Habituellement, lors de l'exécution de la commande, l'utilisateur utilise l'option \texttt{-m 'Mon texte'} afin de décrire les modifications apportés par cette nouvelle version des fichiers.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git_commit.jpg}
+	\caption{\texttt{git commit}}
+	\label{fig:git_commit}
 \end{figure}
 
 \paragraph{git merge}Cette commande permet de fusionner deux branches. Cette commande va fusionner les commits des deux branches depuis leur séparation, le résultat de cette commande est qu'il ne restera plus qu'une branche, intégrant les modifications apportées par les deux branches. L'option \texttt{-m 'Mon texte'} permet de préciser le message du commit qui sera effectué lors de la fusion des deux branches.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git_merge.jpg}
+	\caption{\texttt{git merge}}
+	\label{fig:git_merge}
 \end{figure}
 
 \paragraph{git cherry-pick}Cette commande permet d'appliquer les modifications d'un commit particulier d'une autre branche à la branche actuelle. Par exemple, si un correctif a été développé sur une autre branche, et qu'il devient nécessaire de le déployer sur la branche principale, il est possible, grâce à \texttt{cherry-pick}, de ne récupérer que les modifications apportées par le commit qui nous intéresse.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git_cherry-pick.jpg}
+	\caption{\texttt{git cherry-pick}}
+	\label{fig:git_cherry-pick}
 \end{figure}
 
 \paragraph{git status}La commande permet d'afficher les chemins qui ont des différences entre le fichier index et le HEAD commit actuel mais aussi les chemins qui ont des différences entre l'arbre actuel et le fichier d'index et enfin les chemins de l'abre actuel qui ne sont pas retenus par GIT. Les premiers chemins correspondent à ce que vous utiliseriez en faisant un \texttt{git commit}, tous les autres correspondent quand à eux à un \texttt{git add} suivi d'un \texttt{git commit}. L'option \texttt{-s} ou \texttt{--short} permet de formater l'affichage de la commande dans le format \texttt{short}.
@@ -130,117 +136,142 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 
 \paragraph{git tag}La commande permet de créer, lister, supprimer ou de vérifier un objet "tag" encodé avec la clé GPG. Par exemple si l'on veut supprimer on utilisera  l'option \texttt{-d}, si l'on veut lister on utilisera l'option \texttt{-l} et si l'on veut verifier on utilisera l'option \texttt{-v}.
 
-\paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionnée avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule.
-\begin{figure}[H]
-	\texttt{git branch               \# Permet de lister les branches \\
-			git branch <branche>     \# Permet de créer une nouvelle branche <branche> \\
-			git branch -m <branche>  \# Renomme la branche courante en <branche> \\
-			git branch -d <branche>  \# Permet de supprimer une branche \\
-			git branch -D <branche>  \# Supprime la branche même si elle n'a pas été fusionnée
-	}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{images/git_branch.png}
-	\end{figure}
+\paragraph{git branch}La commande permet de gérer tout ce qui a attrait aux branches (ajout, listing, suppression, renommage). On ne peut cependant  pas supprimer une branche qui n'aurait pas été fusionnée avec une autre (on perdrait alors les modifications de la branche). Si on souhaite forcer cette suppression, et perdre tout le travail effectué dessus il faudra utiliser un D majuscule. \\
+\texttt{git branch               \# Permet de lister les branches \\
+		git branch <branche>     \# Permet de créer une nouvelle branche <branche> \\
+		git branch -m <branche>  \# Renomme la branche courante en <branche> \\
+		git branch -d <branche>  \# Permet de supprimer une branche \\
+		git branch -D <branche>  \# Supprime la branche même si elle n'a pas été fusionnée
+}
+\begin{figure}
+	\centering
+	\includegraphics{images/git_branch.png}
+	\caption{\texttt{git branch}}
+	\label{fig:git_branch}
 \end{figure}
 
-\paragraph{git checkout}Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande \texttt{checkout}. \texttt{git checkout <branche>} permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable.
-\begin{figure}[H]
-	\texttt{git checkout -b <branche> \# est équivalent à : \\
-		    git branch <branche> \\
-			git checkout <branche>}
-	\begin{figure}[H]
-		\centering
-		\includegraphics{images/git_checkout.png}
-	\end{figure}
+\paragraph{git checkout}Une fois les branches créées, il faut être capable d'aller d'une branche à une autre. Pour cela, on peut compter sur la commande \texttt{checkout}. \texttt{git checkout <branche>} permet de se rendre sur une branche existante. En revanche, si vous le souhaitez, vous pouvez demander à git de sauter sur une branche qui n'existe pas en la créant au préalable. \\
+\texttt{git checkout -b <branche> \# est équivalent à : \\
+		git branch <branche> \\
+		git checkout <branche>
+}
+\begin{figure}
+	\centering
+	\includegraphics{images/git_checkout.png}
+	\caption{\texttt{git checkout}}
+	\label{fig:git_checkout}
 \end{figure}
 
 \paragraph{git diff}Comme son nom l’indique, elle permet de voir les changements entre deux versions de fichier (l’ancienne modifiée et l’actuelle) lors de la correction d’un bug ou l’ajout d’une fonctionnalité par exemple. L'option \texttt{--cached} souvent utilisée, permet de comparer après un \texttt{git add} par exemple, les différences avec le dernier commit. Les lignes ajoutées sont donc précédées d’un « + » tandis que les lignes supprimées sont précédées d’un « - ». Normalement les lignes sont colorées et donc faciles à repérer. Par défaut, Git affiche les modifications de tous les fichiers qui ont changé. Vous pouvez demander à Git d’afficher seulement les changements d’un fichier précis, comme ceci : \texttt{git diff chemin/vers/le/fichier.txt}.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_diff.png}
+	\caption{\texttt{git diff}}
+	\label{fig:git_diff}
 \end{figure}
 
 \paragraph{git fetch}Mise à jour des références locales des branches distantes ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt local, de prendre simplement conscience des modifications distantes. Elles ne sont pas appliquées aux branches locales. Cette commande est sûre. Par défaut, le dépôt distant \texttt{origin} est fetché mais il est possible d'effectuer cette opération pour tous les dépôts grâce à l'option \texttt{--all}.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_fetch.png}
+	\caption{\texttt{git fetch}}
+	\label{fig:git_fetch}
 \end{figure}
 
 \paragraph{git pull}Exécution d'un \texttt{git fetch} puis d'un \texttt{git merge}. Bien qu'elle soit pratique, quand la branche locale n'est pas derrière la branche distante, des fusions (avec commits parfois) sont effectués sans pouvoir annuler. Ce qui pose un soucis, pour la lisibilité de l'historique d'un dépôt. Il est d'usage d'utiliser plutôt \texttt{git pull --rebase} afin de remplacer l'opération de merging en une opération de rebasing. Il existe plusieurs façons par \texttt{git config} de spécifier ce comportement par défaut.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_pull.png}
+	\caption{\texttt{git pull}}
+	\label{fig:git_pull}
 \end{figure}
 
 \paragraph{git push}Mise à jour des références du dépôt distant ainsi que des objets git (commit principalement). Dit autrement, elle permet au dépôt distant, d'appliquer les modifications locales. Il pourrait s'agir d'un git pull côté distant, sauf que c'est un autre dépôt qui est à l'initiative. Même si c'est rarement une bonne idée, on peut forcer le push si les branches locales et distantes ne sont pas cohérentes avec l'option \texttt{-f}.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_push.png}
+	\caption{\texttt{git push}}
+	\label{fig:git_push}
 \end{figure}
 
 \paragraph{git stash}La commande stash permet d'enregistrer l'état actuel du répertoire de travail dans lequel on se trouve (les fichiers modifiés et l'index) dans une pile. Cette commande est particulièrement utile quand on souhaite changer de branche sur un projet alors que les modifications que l'on a apportées aux fichiers sont en conflit avec le répertoire source. Dans ce cas, la commande \texttt{git pull} ne va pas autoriser la réécriture. Pour résoudre ce problème, on peut effectuer un \texttt{git stash} pour stocker les changements en cours et partir travailler dans une autre branche. Il suffit ensuite de faire \texttt{git stash --list} pour afficher la liste de toutes les stashs enregistrées. Pour recharger la dernière stash effectuée il faut entrer la commande \texttt{git stash apply}. Si l'on veut charger une stash antérieur, il faut préciser lequel en utilisant la commande \texttt{git stash apply stash@{X}} (X étant le numéro de la stash que l'on veut sélectionner).
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_stash.png}
+	\caption{\texttt{git stash}}
+	\label{fig:git_stash}
 \end{figure}
 
 \paragraph{git reset}La commande \texttt{reset} permet de corriger des erreurs dans l'arbre de travail dans lequel on se situe. Pour ce faire reset va réinitialiser l'arbre de travail dans l'état auquel il était au dernier commit. Il faut noter que la commande reset va corriger uniquement des erreurs qui n'ont pas été commit. En utilisant la commande \texttt{git reset --hard HEAD} à la fois toutes les modifications faites sur l'arbre ainsi que les modifications de l'index git seront supprimées.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_reset.png}
+	\caption{\texttt{git reset}}
+	\label{fig:git_reset}
 \end{figure}
 
 \paragraph{git init}Cette commande permet de créer un répertoire git vide contenant les sous répertoires \texttt{refs/heads} et \texttt{refs/tags}. Cette fonction ne peut pas être lancée dans un répertoire existant. On peut notamment l’utiliser de la façon suivante : \texttt{git init -q}, où \texttt{-q} permet de supprimer l’affichage de tous les messages concernant la réalisation de la commande, à l’exception des messages d’erreur.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git-init.png}
+	\caption{\texttt{git init}}
+	\label{fig:git_init}
 \end{figure}
 
 
 \paragraph{git clone}Cette commande permet créer un nouveau répertoire identique à celui placé en argument. On peut utiliser cette commande avec l’option \texttt{-l} : on obtient \texttt{git clone -l "le nom du répertoire"}, où \texttt{-l} permet de de créer ce clone directement dans la mémoire interne de la machine.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git-clone.png}
+	\caption{\texttt{git clone}}
+	\label{fig:git_clone}
 \end{figure}
 
 \paragraph{git rebase}Cette commande permet d'ajouter toutes les modifications faites sur une branche, à une autre branche. On peut utiliser cette commande avec l'option \texttt{-onto} : on obtient \texttt{git rebase -onto "nom du fichier"}, où \texttt{-onto} permet de choisir à partir de quel fichier d'une branche les modification d'une autre branche sont ajoutées.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/git-rebase.png}
+	\caption{\texttt{git rebase}}
+	\label{fig:git_rebase}
 \end{figure}
 
 \paragraph{git add}Ajoute les modifications d’un fichier de la branche active dans le dépôt de git. Elle est utilisée avant le commit. \texttt{-p} : on obtient \texttt{git add -p "nom du fichier"}, où \texttt{-p} (patch mode) Elle est utilisée pour les fichiers modifiés. Cette option permet d’indexer les modifications que l’on souhaite retenir ou les indexer séparément. Il y a plusieurs modes : indexer, ne pas indexer, indexer le reste des modifications, etc.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_add_-p}
+	\caption{\texttt{git add}}
+	\label{fig:git_add}
 \end{figure}
 
 \paragraph{git rm}Permet d’effacer un fichier de la branche courante et de l’ index. \texttt{--cached} : on obtient \texttt{git rm --cached "nom du fichier"}, où \texttt{--cached} supprime le fichier du dépôt git mais pas du répertoire personnel.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_rm_--cached.png}
+	\caption{\texttt{git rm}}
+	\label{fig:git_rm}
 \end{figure}
 
 \paragraph{git mv}Renomme un fichier et/ou le change de répertoire. \texttt{-f} : on obtient \texttt{git rm -f "nom du fichier"}, où \texttt{-f} force le renommage du fichier ou son déplacement. Il peut être dangereux car les fichiers du même nom sont effacés.
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics{images/git_mv_-f}
+	\caption{\texttt{git mv}}
+	\label{fig:git_mv}
 \end{figure}
 
-
+\FloatBarrier % FIGURES, YOU SHALL NOT PASS!
 \section{Utilisation de Github}
 
 \paragraph{}Le dépot git a été créé et initialisé par \joffrey à partir de \textit{github.com}, les premiers documents textes ont ainsi été créés (voir figure \ref{fig:InitDepot}).
-
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/initialisation_depot.JPG}
 	\caption{Création du dépôt}
 	\label{fig:InitDepot}
 \end{figure}
+
 \paragraph{}\kevin a ensuite créé un document \texttt{tex} afin de pouvoir mettre en forme le document final, il y a ensuite introduit les textes des différents membres (voir figure \ref{fig:InitLatex}).
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/initialisation_tex.JPG}
 	\caption{Création du document \LaTeX}
@@ -249,50 +280,50 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 
 \paragraph{}Chaque membre a donc rédigé la description des fonctions \texttt{git} qui lui avaient été attribuées. Aussi, chacun a ajouté au dépot, dans le dossier \texttt{images}, les imprimés-écran montrant l'utilisation de chaque fonction.
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_antoine.JPG}
 	\caption{Commits de \antoine}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_estelle.png}
 	\caption{Commits de \estelle}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_joffrey.JPG}
 	\caption{Commits de \joffrey}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_julien.png}
 	\caption{Commits de \julien}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_karen.png}
 	\caption{Commits de \karen}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_kevin.JPG}
 	\caption{Commits de \kevin}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/commit_valentin.JPG}
 	\caption{Commits de \valentin}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{images/merge_branche.png}
 	\caption{Un exemple de branche créé}
