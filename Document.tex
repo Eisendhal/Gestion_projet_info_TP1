@@ -23,19 +23,20 @@
 \usepackage[toc,page]{appendix} % Pour avoir des annexes et qui figures sur le sommaire
 \usepackage{float} % Pour placer précisement les figures (notament la position 'H')
 \usepackage{titlesec} % Pour sauter les pages à chaque section
+\usepackage{placeins} % Pour que les figures ne flottent que dans les bonnes sections
 
 \begin{document}
 
 \newcommand{\sectionbreak}{\clearpage} % Applique le saut de page à chaque section
 
 % Membres du groupe
-\newcommand{\antoine}{Antoine \textsc{Moreau}}
-\newcommand{\estelle}{Estelle \textsc{Michel}}
-\newcommand{\joffrey}{Joffrey \textsc{Germain}}
-\newcommand{\julien}{Julien \textsc{Naty-Daufin}}
-\newcommand{\karen}{Karen \textsc{Migan}}
-\newcommand{\kevin}{Kévin \textsc{Seroux}}
-\newcommand{\valentin}{Valentin \textsc{Tertois}}
+\newcommand{\antoine}{Antoine \textsc{Moreau} }
+\newcommand{\estelle}{Estelle \textsc{Michel} }
+\newcommand{\joffrey}{Joffrey \textsc{Germain} }
+\newcommand{\julien}{Julien \textsc{Naty-Daufin} }
+\newcommand{\karen}{Karen \textsc{Migan} }
+\newcommand{\kevin}{Kévin \textsc{Seroux} }
+\newcommand{\valentin}{Valentin \textsc{Tertois} }
 
 \begin{titlepage}
 
@@ -227,73 +228,83 @@ Les commandes \texttt{merge}, \texttt{fetch}, \texttt{pull}, \texttt{push} prenn
 	\includegraphics{images/git_mv_-f}
 \end{figure}
 
+
 \section{Utilisation de Github}
-\paragraph{}Le dépot git a été créé et initialisé par Joffrey à partir de \textit{github.com}, les premiers documents textes ont ainsi été créés.
 
-\begin{figure}[H]
+\paragraph{}Le dépot git a été créé et initialisé par \joffrey à partir de \textit{github.com}, les premiers documents textes ont ainsi été créés (voir figure \ref{fig:InitDepot}).
+
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/initialisation_depot.JPG}
+	\includegraphics[width=\textwidth]{images/initialisation_depot.JPG}
+	\caption{Création du dépôt}
+	\label{fig:InitDepot}
 \end{figure}
-
-
-\paragraph{}Kévin a ensuite créé un document \texttt{tex} afin de pouvoir mettre en forme le document final, il y a ensuite introduit les textes des différents membres.
-\begin{figure}[H]
+\paragraph{}\kevin a ensuite créé un document \texttt{tex} afin de pouvoir mettre en forme le document final, il y a ensuite introduit les textes des différents membres (voir figure \ref{fig:InitLatex}).
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/initialisation_tex.JPG}
+	\includegraphics[width=\textwidth]{images/initialisation_tex.JPG}
+	\caption{Création du document \LaTeX}
+	\label{fig:InitLatex}
 \end{figure}
-
 
 \paragraph{}Chaque membre a donc rédigé la description des fonctions \texttt{git} qui lui avaient été attribuées. Aussi, chacun a ajouté au dépot, dans le dossier \texttt{images}, les imprimés-écran montrant l'utilisation de chaque fonction.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_antoine.JPG}
+	\includegraphics[width=\textwidth]{images/commit_antoine.JPG}
+	\caption{Commits de \antoine}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_estelle.JPG}
+	\includegraphics[width=\textwidth]{images/commit_estelle.JPG}
+	\caption{Commits de \estelle}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_joffrey.JPG}
+	\includegraphics[width=\textwidth]{images/commit_joffrey.JPG}
+	\caption{Commits de \joffrey}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_julien.JPG}
+	\includegraphics[width=\textwidth]{images/commit_julien.JPG}
+	\caption{Commits de \julien}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_karen.JPG}
-\end{figure}
-\begin{figure}[H]
-	\centering
-	\includegraphics{images/commit_karen2.JPG}
+	\includegraphics[width=\textwidth]{images/commit_karen.JPG}
+	\includegraphics[width=\textwidth]{images/commit_karen2.JPG}
+	\caption{Commits de \karen}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_kevin.JPG}
+	\includegraphics[width=\textwidth]{images/commit_kevin.JPG}
+	\caption{Commits de \kevin}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/commit_valentin.JPG}
+	\includegraphics[width=\textwidth]{images/commit_valentin.JPG}
+	\caption{Commits de \valentin}
 \end{figure}
 
 
-\paragraph{}Antoine a quant à lui rédigé l'introduction de ce document. D'autres branches ont également été créées comme demandé dans le sujet.
-
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-	\includegraphics{images/merge_branche.JPG}
+	\includegraphics[width=\textwidth]{images/merge_branche.JPG}
+	\caption{Un exemple de branche créé}
+	\label{fig:Branche}
 \end{figure}
 
-\paragraph{}Joffrey et Julien ont ensuite rédigé la partie que vous êtes en train de lire. Enfin, Kévin a mis en forme le tableau d'appréciation des membres du projet.
+\paragraph{}\antoine a quant à lui rédigé l'introduction de ce document. D'autres branches ont également été créées comme demandé dans le sujet (voir figure \ref{fig:Branche}).
 
+\paragraph{}\joffrey et \julien ont ensuite rédigé la partie que vous êtes en train de lire. Enfin, Kévin a mis en forme le tableau d'appréciation des membres du projet.
+
+\FloatBarrier % FIGURES, YOU SHALL NOT PASS!
 \newpage
 \begin{appendices} % Les annexes commencent
 
